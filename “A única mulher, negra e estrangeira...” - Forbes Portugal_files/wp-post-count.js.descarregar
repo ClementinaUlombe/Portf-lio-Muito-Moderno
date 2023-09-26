@@ -1,0 +1,11 @@
+jQuery( document ).ready( function() {
+	jQuery.ajax({
+		url: wp_post_count.ajax_url,
+		type: 'POST',
+		data: {
+			action: 'wppc_post_count',
+			post_id: wp_post_count.post_id,
+			nonce: wp_post_count.nonce
+		}
+	});
+});
